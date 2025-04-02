@@ -6,9 +6,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class CompletableFutureDemo {
+public class Demo8 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        CompletableFuture<Void> asyncOp = CompletableFuture.runAsync(CompletableFutureDemo::doAsyncOperation);
+        CompletableFuture<Void> asyncOp = CompletableFuture.runAsync(Demo8::doAsyncOperation);
         doSomethingElse();
         asyncOp.join();
 
